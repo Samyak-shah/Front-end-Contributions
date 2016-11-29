@@ -1,0 +1,39 @@
+<ion-view hide-back-button="true" view-title="Home" class="backgroundColor" cache-view="false">
+  <ion-tabs class="tabs-top">
+	  <ion-tab title="Practice" ui-sref="app.home.practice" class="full-width-tab">
+		<ion-nav-view name="practice"></ion-nav-view>
+	  </ion-tab>
+	  <ion-tab title="Quiz-Off" ui-sref="app.home.quiz" class="full-width-tab left-border-tab">
+		<ion-nav-view name="quiz"></ion-nav-view>
+	  </ion-tab>
+  </ion-tabs>	
+	
+  <ion-content padding="true">
+	<div class="card red">
+	  <div class="item item-divider text-center">
+		Practice
+	  </div>
+	  <div class="item item-text-wrap text-center">
+		Resume current session
+	  </div>
+	  <div class="item item-text-wrap text-center">
+		Start new session
+	  </div>
+	</div>
+
+	<div class="card">	
+	  <div class="item item-divider text-center">
+		Quiz-Off
+	  </div>
+	  <div class="item item-text-wrap text-center">
+		Challenge a friend
+	  </div>
+	  <div class="item item-text-wrap text-center">
+		Play a random player
+	  </div>
+	  <div class="item item-text-wrap text-center">
+		Enter a tournament
+	  </div>
+	</div>
+  </ion-content>
+</ion-view>

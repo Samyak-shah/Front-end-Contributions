@@ -1,0 +1,116 @@
+/************************* Practice page *****************************/
+.wgulightgrey{
+  background:rgba(217,217,214,0.5)!important;
+}
+
+.wgudarkblue{
+  background-color: #003057 !important;
+}
+
+.wgulightblue{
+  background-color: #4986AD !important;
+}
+
+.practice-ul {
+	margin: 0;
+	padding: 0;
+}
+
+.practice-li {
+	list-style: none;
+}
+
+.practice-check-button{
+  margin-top: 20%;
+  color: white;
+}
+
+.practice-container {
+  margin-top: 10% !important;
+}
+.practice-options {
+	margin: 10px 0;
+}
+
+.practice-options{
+  font-size: 20px !important;
+}
+
+.practice-next-question {
+	margin-right: 10px;
+}
+
+.practice-score {
+	margin-top: 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.practice-box{
+  height:1000px;
+}
+
+.practice-item-left,
+.practice-item-center,
+.practice-item-right {
+       position: absolute;
+       width: 30px
+}
+
+.practice-item-left { left: 5px; }
+
+.practice-item-center1 {
+       margin-left: 45%;
+       -webkit-transform: translateX(-50%);
+       transform: translateX(-50%)
+   }
+
+.practice-item-center2 {
+      margin-left: 5%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%)
+}
+
+.practice-item-center3 {
+       margin-left: 50%;
+       -webkit-transform: translateX(-50%);
+       transform: translateX(-50%)
+   }
+
+.practice-item-center4 {
+          margin-left: 10%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%)
+}
+
+.practice-item-right { right: 5px; }
+
+/* http://stackoverflow.com/questions/31918745/how-do-i-change-button-color-in-ionic-framework */
+ .button.practice-button-blue {
+            border-color: transparent;
+            background-color: #003057;
+            color: #FFFFFF; }
+            .button.practice-button-blue:hover {
+              color: #FFFFFF;
+              text-decoration: none; }
+            .button.practice-button-blue.active, .button.practice-button-blue.activated {
+              background-color:#00223e; 
+			  border-color: transparent;
+			  }
+            .button.practice-button-blue.button-clear {
+              border-color: transparent;
+              background: none;
+              box-shadow: none;
+              color: #003057; }
+            .button.practice-button-blue.button-icon {
+              border-color: transparent;
+              background: none; }
+            .button.practice-button-blue.button-outline {
+              border-color: #003057;
+              background: transparent;
+              color: #003057; }
+              .button.practice-button-blue.button-outline.active, .button.practice-button-blue.button-outline.activated {
+                background-color: #003057;
+                box-shadow: none;
+                color: #FFFFFF; }
+/****************************************************/

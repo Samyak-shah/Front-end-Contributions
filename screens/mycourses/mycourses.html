@@ -1,0 +1,16 @@
+<ion-view hide-back-button="true" view-title="My Courses" class="backgroundColor" cache-view="false">
+	<ion-tabs class="tabs-top">
+		<ion-tab title="Active" ui-sref="app.mycourses.active" class="full-width-tab">
+			<ion-nav-view name="active"></ion-nav-view>
+		</ion-tab>
+		<ion-tab title="Inactive" ui-sref="app.mycourses.inactive" class="full-width-tab left-border-tab">
+			<ion-nav-view name="inactive"></ion-nav-view>
+		</ion-tab>
+	</ion-tabs>
+  
+    <ion-content padding="true">
+		<div class="bar bar-footer mediumGray">
+			<button class="button pull-right button-blue whiteText">Edit</button>
+		</div>
+	</ion-content>
+</ion-view>

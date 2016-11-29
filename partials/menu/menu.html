@@ -1,0 +1,54 @@
+<ion-side-menus enable-menu-with-back-views="true" ng-controller="MenuCtrl as vm">
+  <ion-side-menu-content drag-content="false">
+    <ion-nav-bar class="bar-stable blue" align-title="left">
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon whiteText" menu-toggle="menu_side">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-content>
+    <div class="item blue">
+    <div class="row">
+      <div class="col col-50">
+        <img src="//ionicframework.com/img/docs/spengler.jpg">
+      </div>
+      <div class="col col-50">
+      <div class="whiteText fontz"><b>{{ vm.firstName }}</b></div>
+      <br />
+      <div class="whiteText fontz"><b>{{ vm.lastName }}</b></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-33 whiteText">
+        ID: <!-- TODO: Node shit -->
+      </div>
+      <div class="col col-67 whiteText">
+        6784518758930 <!-- TODO: Node shit -->
+      </div>
+        </div>
+
+    <div class="row">
+      <div class="col col-33 whiteText">
+        Course: <!-- TODO: Node shit -->
+      </div>
+      <div class="col col-67 whiteText">
+        Intro to Biology <!-- TODO: Node shit -->
+      </div>
+        </div>
+    </div>
+
+    <ion-list>
+      <ion-item menu-close ng-repeat="item in vm.menuItems" ui-sref="{{ item.state }}">
+        <i class="icon" ng-class="item.icon"></i>
+        {{ item.title }}
+      </ion-item>
+    </ion-list>
+
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,69 @@
+/****************** Tab Bar Styling ******************/
+
+.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
+  border-bottom: 5px solid #145fd7 !important;
+}
+
+.tabs-icon-top > .tabs .tab-item, .tabs-icon-top.tabs .tab-item, .tabs-icon-bottom > .tabs .tab-item, .tabs-icon-bottom.tabs .tab-item {
+  line-height: 12px !important;
+  height: 48px !important;
+}
+
+.full-width-tab{
+  max-width:100% !important;
+}
+
+.left-border-tab {
+	/*border-left: 5px solid white;*/
+}
+
+.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
+    opacity: 1 !important;
+    background: #4986AD !important;
+}
+
+.tab-item {
+	background-color: #4986AD !important;
+	 opacity: 1 !important;
+	 color: white;
+}
+
+.tab-item.tab-item-active {
+	background-color: #4986AD !important;
+	font-weight: bold !important;
+	color: white;
+}
+/****************** End Tab Bar Styling ******************/
+
+
+/* http://stackoverflow.com/questions/31918745/how-do-i-change-button-color-in-ionic-framework */
+ .button.button-blue {
+            border-color: transparent;
+            background-color: #003057;
+            color: #000000; }
+            .button.button-blue:hover {
+              color: #000000;
+              text-decoration: none; }
+            .button.button-blue.active, .button.button-blue.activated {
+              background-color:#4986AD; }
+            .button.button-blue.button-clear {
+              border-color: transparent;
+              background: none;
+              box-shadow: none;
+              color: #003057; }
+            .button.button-blue.button-icon {
+              border-color: transparent;
+              background: none; }
+            .button.button-blue.button-outline {
+              border-color: #003057;
+              background: transparent;
+              color: #003057; }
+              .button.button-blue.button-outline.active, .button.button-blue.button-outline.activated {
+                background-color: #003057;
+                box-shadow: none;
+                color: #000000; }
+/****************************************************/
+
+button.iconSize i:before {
+    font-size: 2.5em !important;
+}

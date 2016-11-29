@@ -1,0 +1,82 @@
+<ion-view view-title="Practice" class="backgroundColor">
+	<ion-nav-buttons side="right">
+	  <i class="icon ion-star favoriteButton" ng-click="favoriteQuestion()"></i>
+	  <i class="icon ion-help-circled hintButton" ng-click="getHint()"></i>
+    </ion-nav-buttons>
+	<script id="my-modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive wgulightblue">
+          <h1 class="title">Feedback (change this title)</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+        <ion-content>
+          <ion-list class="item-text-wrap">
+			<ion-item class="feedbackQuestionText questionText">
+			  {{questionText}}
+			</ion-item>
+			<ion-item class="feedbackSelectedAnswer">
+		      {{selectedAnswer}}
+			</ion-item>
+			<ion-item class="feedbackText">
+			  {{feedbackText}}
+			</ion-item>
+        </ion-content>
+		
+	    <ion-footer-bar class="bar-assertive wgulightblue" style="background-image: none !important;">
+		  <button class="button icon ion-chevron-left pull-left backArrow practice-button-blue" ng-click="previousQuestion()"></button>
+		  <div class="text-center">
+			<i ng-repeat="ques in questions_info" class="icon ion-record progressDot dot{{$index}}"></i>
+			<div style="z-index: 9999; position:fixed; text-align: center; margin-left: 15%;" class="text-center questionProgression"></div>
+		  </div>
+		  <button class="button icon ion-chevron-right pull-right nextArrow practice-button-blue" ng-click="nextQuestion()"></button>
+	    </ion-footer-bar>
+      </ion-modal-view>
+    </script>
+	
+  <ion-content scroll="false" class="has-footer">
+        <ion-slide-box options="options" slider="data.slider" ng-init="disableSwipe()">
+              <ion-slide ng-repeat="ques in questions_info">
+				<div class="box container lightgrey" id="{{ques.question_id}}">
+					<ion-list class="item-text-wrap">
+						<ion-item>
+							<div class="questionText">{{ques.question_text}}</div>
+						</ion-item>
+						<ion-item ng-repeat="option in choices_info[ques.question_id]" ng-click="answerSelected(option, $index)">
+							<label class="options item-center4 choiceText">
+							  <input type="radio" name="answer{{ques.question_id}}" value="{{option.choice_id}}" ng-click="answerSelected(option, $index)">
+							  {{option.choice_text}}
+							</label>
+						</ion-item>
+					</ion-list>
+				 </div>
+              </ion-slide>
+        </ion-slide-box>
+		<!--
+		  <button class="button check-button" ng-click="insertCourse()">Add Course</button>
+		  <button class="button check-button" ng-click="insertModule()">Add Module</button>
+		  <button class="button check-button" ng-click="insertQuestion()">Add 5 questions</button>
+		  <button class="button check-button" ng-click="selectQuestions()">Select all 5 questions</button>
+		  <button class="button check-button" ng-click="selectQuestionFromModules('Module1')">Select Module 1</button>
+		  <button class="button check-button" ng-click="selectQuestionFromModules('Module2')">Select Module 2</button>
+		  <button class="button check-button" ng-click="selectBookmarkedQuestions()">BookmarkedQuestions</button>
+		-->
+  </ion-content>
+  
+  <ion-footer-bar id="submitButton" class="bar-subfooter wguyellowdisabled whiteText row" ng-click="checkAnswer()">        
+		<div class="col text-center">
+			<b>Submit</b>
+		</div>
+	<!--<button class="button check-button item-center widthone" ng-click="checkAnswer(ques, $index); showDiv=true"  ng-show="!showDiv">Confirm Response</button>-->
+  </ion-footer-bar>
+  
+  <ion-footer-bar class="bar-assertive wgulightblue" style="background-image: none !important;">
+	  <!--<button class="button item-left ion-chevron-left" ng-click="previousQuestion()"></button>-->
+	  <button class="button icon ion-chevron-left pull-left backArrow practice-button-blue" ng-click="previousQuestion()"></button>
+	  <div class="text-center">
+		<i ng-repeat="ques in questions_info" class="icon ion-record progressDot dot{{$index}}"></i>
+		<div style="z-index: 9999; position:fixed; text-align: center; margin-left: 15%;" class="text-center questionProgression"></div>
+	  </div>
+	  <button disabled class="button icon ion-chevron-right pull-right nextArrow practice-button-blue" ng-click="nextQuestion()"></button>
+  </ion-footer-bar>
+
+</ion-view>

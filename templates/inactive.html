@@ -1,0 +1,27 @@
+<ion-view view-title="My Courses" cache-view="false">
+	<ion-content padding="true">
+		<ul class="list">
+			<li class="item row" ng-repeat="course in inactiveCourses">
+				<div class="col col-80">
+					Course {{course.name}}
+					<p>{{course.completion}}</p>
+				</div>
+
+				<div class="col col-20 alignSelfCenter">
+					<button class="button iconSize whiteBackground" ng-click="pieChart('pie chart', $index, $event)" ng-show="!editingInactiveCourses">
+					  <i class="icon ion-chevron-right"></i>
+					</button>
+					<ion-checkbox ng-model="isChecked" ng-change="inactiveCoursesChecked(course, isChecked, $index)" ng-init='isChecked=false' ng-show="editingInactiveCourses"></ion-checkbox>
+				</div>
+			</li>
+		</ul>
+	</ion-content>
+	
+	<div class="bar bar-footer mediumGray item-button-right">
+		<div class="buttons">
+			<button class="button pull-right button-blue whiteText" ng-click="editInactiveCourses()" ng-show="!editingInactiveCourses">Edit</button>
+			<button class="button button-blue whiteText item-right" ng-click="saveInactiveCourses()" ng-show="editingInactiveCourses">Save</button>
+			<button class="button button-blue whiteText item-right" ng-click="cancelInactiveCourses()" ng-show="editingInactiveCourses">Cancel</button>
+		</div>
+	</div>
+</ion-view>

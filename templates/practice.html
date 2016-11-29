@@ -1,0 +1,51 @@
+<ion-view view-title="Home" cache-view="false">
+        <ion-content padding="true">
+			<center>
+			<button class="button button-blue whiteText">
+			  Resume Sessions
+			</button>
+			<hr />
+			<button class="button button-blue whiteText" ng-click="startNewSession()">
+			  Start New Session
+			</button>
+			</center>
+			<ion-list type="list-inset">
+				<div ng-repeat="course in courses">
+				  <ion-item class="item-stable row"
+							ng-click="toggleCourse(course)"
+							ng-class="{active: isCourseShown(course)}">
+					<div class="col col-80">
+						  <i class="icon" ng-class="isCourseShown(course) ? 'ion-minus' : 'ion-plus'"></i>
+						&nbsp;
+
+						Course {{course.name}}
+						<p>{{course.completion}}</p>
+					</div>
+
+					<div class="col col-20 alignSelfCenter">
+						<button class="button iconSize" ng-click="pieChart('pie chart', $index, $event)">
+						  <i class="icon ion-pie-graph"></i>
+						  </button>
+					</div>
+
+				  </ion-item>
+				  <ion-item class="item-accordion row paddingLeft0px"
+							ng-repeat="module in course.modules"
+							ng-show="isCourseShown(course)">
+							
+					  <div class="col col-80">
+						<ion-checkbox ng-model="isChecked" class="checkbox-balanced borderNone" ng-change="modulesChecked(module, isChecked, $index)" ng-init='isChecked=false'>
+									  Module {{module.name}}
+									  <p>{{module.completion}}</p>
+						</ion-checkbox>
+					  </div>
+					  <div class="col col-20 alignSelfCenter">
+						<button class="button button-blue whiteText">
+						  info
+						</button>
+					  </div>
+				  </ion-item>
+				</div>
+			</ion-list>
+        </ion-content>
+      </ion-view>

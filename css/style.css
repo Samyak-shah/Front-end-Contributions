@@ -1,0 +1,328 @@
+@font-face {
+    font-family: FuturaStandard-Light;
+    src: url('/fonts/Futura-Light.ttf');/*url("/fonts/FuturaStandard-Light.ttf");*/
+}
+
+@font-face {
+    font-family: FuturaStandard-Medium;
+    src: url("/fonts/Futura-Medium.ttf"); /*url("/fonts/FuturaStandard-Medium.ttf");*/
+}
+
+@font-face {
+    font-family: FuturaStandard-Heavy;
+    src: url("/fonts/Futura-Heavy.ttf"); /*url("/fonts/FuturaStandard-Heavy.ttf");*/
+}
+
+.darkBlue {
+  background-color: #003057 !important;/*#303F9F !important;*/
+}
+
+.blue {
+  background-color: #4986AD !important;
+}
+
+.title, .whiteText {
+  color: #FFFFFF !important;
+}
+
+.backgroundColor {
+  background-color: #FAFAFA !important;
+}
+
+.fontz {
+  font-size: 2em;
+  font-style: bold;
+}
+
+/* different margin tops for every row (multiples of 10)*/
+
+.row-10 {
+  margin-top: 10% !important;
+}
+
+.row-20 {
+  margin-top: 20% !important;
+}
+
+.row-30 {
+  margin-top: 30% !important;
+}
+
+.row-40 {
+  margin-top: 40% !important;
+}
+
+.row-50 {
+  margin-top: 50% !important;
+}
+
+.scroll-content {
+  background-color: rgba(217,217,214,0.5) !important;
+}
+
+.mobileAppName{
+  margin-top: 5%;
+  color: #F6BE00;
+  font-size: 3em;
+  font-family: FuturaStandard-Light;
+
+}
+
+.button-block {
+    background-color: rgba(73,134,160,0.8) !important;
+    font-family: "FuturaStandard-Heavy" !important;
+    font-size: 1.5em !important;
+}
+.button.button-positive.activated {
+    background-color: rgb(73,134,160) !important;
+}
+
+.item-input{
+  color: #97999B !important;
+  font-family: "FuturaStandard-Light" !important;
+}
+
+/************************* Modules page start *****************************/
+.alignSelfCenter {
+    align-self: center;
+}
+
+.borderNone {
+  border: none;
+}
+
+.paddingLeft0px {
+  padding-left: 0px;
+}
+/************************* Modules page end *****************************/
+
+/************************* Practice page start *****************************/
+.wgulightgrey{
+  background:rgba(217,217,214,0.5)!important;
+  border: 1px solid rgba(217,217,214,0.5)!important;
+}
+
+.wgudarkblue{
+  background-color: #003057 !important;
+  border: 1px solid #003057)!important;
+}
+
+.wgulightblue{
+  background-color: #4986AD !important;
+  border: 1px solid #4986AD!important;
+}
+
+.wguyellow {
+	background-color: rgba(246,190,0, 1.0) !important;
+}
+
+.wguyellowdisabled {
+	background-color: rgba(246,190,0, 0.5) !important;
+}
+
+.incorrectAnswer {
+	color: white;
+	background-color: rgba(134, 38, 51, 0.5);
+}
+
+.correctAnswer {
+	color: white;
+	background-color: rgba(80, 158, 47, 0.5);
+}
+
+.practice-ul {
+  margin: 0;
+  padding: 0;
+}
+
+.practice-li {
+  list-style: none;
+}
+
+.practice-check-button{
+  margin-top: 20%;
+  color: white;
+}
+
+.practice-container {
+  margin-top: 10% !important;
+}
+.practice-options {
+  margin: 10px 0;
+}
+
+.practice-options{
+  font-size: 20px !important;
+}
+
+.practice-next-question {
+  margin-right: 10px;
+}
+
+.practice-score {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.practice-box{
+  height:1000px;
+}
+
+.practice-item-left,
+.practice-item-center,
+.practice-item-right {
+       position: absolute;
+       width: 30px
+}
+
+.practice-item-left { left: 5px; }
+
+.practice-item-center1 {
+       margin-left: 45%;
+       -webkit-transform: translateX(-50%);
+       transform: translateX(-50%)
+   }
+
+.practice-item-center2 {
+      margin-left: 5%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%)
+}
+
+.practice-item-center3 {
+       margin-left: 50%;
+       -webkit-transform: translateX(-50%);
+       transform: translateX(-50%)
+   }
+
+.practice-item-center4 {
+          margin-left: 10%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%)
+}
+
+.practice-item-right { right: 5px; }
+
+.progressDot {
+	color: rbga(217,217,214, 1.0);
+	margin: 1px;
+}
+
+.greyDot {
+	color: rgba(151, 153, 155, 1.0) !important;
+}
+
+.greyDotSelected {
+	color: rgba(151, 153, 155, 0.5) !important;
+}
+
+.redDot {
+	color: rgba(134, 38, 51, 1.0) !important;
+}
+
+.redDotSelected {
+	color: rgba(134, 38, 51, 0.5) !important;
+}
+
+.greenDot {
+	color: rgba(80, 158, 47, 1.0) !important;
+}
+
+.greenDotSelected {
+	color: rgba(80, 158, 47, 0.5) !important;
+}
+
+.slider-pager { 
+	display: none;
+}
+
+.questionText {
+	font-size: 1.5em;
+}
+
+.choiceText {
+	font-size: 1.0em;
+}
+
+.widthone {
+	width: 100%;
+}
+
+.backArrow {
+	margin-right: 20%;
+}
+
+.nextArrow {
+	margin-left: 20%;
+}
+
+.favoriteButton {
+	font-size: 2.0em;
+	margin: 5px;
+	color: #003057;
+}
+
+.hintButton {
+	font-size: 2.0em;
+	margin: 5px;
+	color: #003057;
+}
+
+.yellow {
+	color: rgb(246, 190, 0);
+}
+
+/* http://stackoverflow.com/questions/31918745/how-do-i-change-button-color-in-ionic-framework */
+ .button.practice-button-blue {
+            border-color: transparent;
+            background-color: #003057;
+            color: #FFFFFF; }
+            .button.practice-button-blue:hover {
+              color: #FFFFFF;
+              text-decoration: none; }
+            .button.practice-button-blue.active, .button.practice-button-blue.activated {
+              background-color:#00223e; 
+        border-color: transparent;
+        }
+            .button.practice-button-blue.button-clear {
+              border-color: transparent;
+              background: none;
+              box-shadow: none;
+              color: #003057; }
+            .button.practice-button-blue.button-icon {
+              border-color: transparent;
+              background: none; }
+            .button.practice-button-blue.button-outline {
+              border-color: #003057;
+              background: transparent;
+              color: #003057; }
+              .button.practice-button-blue.button-outline.active, .button.practice-button-blue.button-outline.activated {
+                background-color: #003057;
+                box-shadow: none;
+                color: #FFFFFF; }
+/************************* Practice page end *****************************/
+
+
+/*************************Profile page begin*****************************/
+
+.profile-picture{
+  
+  border-radius: 50%; 
+  height: 120px; 
+  width:120px; 
+}
+
+.align{
+  text-align: center;
+}
+
+.gray{
+  background-color: gray;
+}
+
+.toggle input:checked + .profile-toggle {
+   background-color: #003057 !important;
+}
+
+/*************************Profile-page-ends**********************************/

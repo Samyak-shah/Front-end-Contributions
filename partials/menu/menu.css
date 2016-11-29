@@ -1,0 +1,9 @@
+/*
+  Removes the border from the page header bar
+*/
+.bar-header {
+    border: 0px !important;
+    border-bottom-color: transparent !important;
+    background-image: none !important;
+    border-bottom: none !important;
+}

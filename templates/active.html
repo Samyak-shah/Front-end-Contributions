@@ -1,0 +1,31 @@
+<ion-view view-title="My Courses" cache-view="false">
+	<ion-content padding="true">
+		<ul class="list">
+			<li class="item row" ng-repeat="course in activeCourses">
+				<div class="col col-80">
+					Course {{course.name}}
+					<p>{{course.completion}}</p>
+				</div>
+
+				<div class="col col-20 alignSelfCenter">
+					<button class="button iconSize whiteBackground" ng-show="!editingActiveCourses" ng-click="getInfo(course, $index)">
+					  <i class="icon ion-chevron-right"></i>
+					</button>
+					<ion-checkbox ng-model="isChecked" ng-change="activeCoursesChecked(course, isChecked, $index)" ng-init='isChecked=false' ng-show="editingActiveCourses"></ion-checkbox>
+				</div>
+			</li>
+		</ul>
+		
+		<div class="one">
+
+		</div>
+	</ion-content>
+	<div class="bar bar-footer mediumGray item-button-right">
+		<div class="buttons">
+			<button class="button pull-right button-blue whiteText" ng-click="editActiveCourses()" ng-show="!editingActiveCourses">Edit</button>
+			<button class="button button-blue whiteText item-right" ng-click="saveActiveCourses()" ng-show="editingActiveCourses">Save</button>
+			<button class="button button-blue whiteText item-right" ng-click="cancelActiveCourses()" ng-show="editingActiveCourses">Cancel</button>
+		</div>
+	</div>
+
+</ion-view>
